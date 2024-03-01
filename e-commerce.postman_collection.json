@@ -1,0 +1,986 @@
+{
+	"info": {
+		"_postman_id": "e289e2d4-4c5d-4461-8f26-9710253319c4",
+		"name": "e-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26601218",
+		"_collection_link": "https://www.postman.com/flight-cosmologist-32584706/workspace/node-js/collection/26601218-e289e2d4-4c5d-4461-8f26-9710253319c4?action=share&source=collection_link&creator=26601218"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iphone 124",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/iphone12.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/addCategory",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "main electronics",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/hp/Desktop/electronic2.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/update/65b2630f05319cf50714e03e",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"update",
+								"65b2630f05319cf50714e03e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all with all sub",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "main electronics",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id with all sub",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "main electronics",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65b2630f05319cf50714e03e",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65b2630f05319cf50714e03e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subCategory",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apple phones 4",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/iphone13.jpg"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65e0a79a3bf9b9c4c6d2f9e4/subCategory/add",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65e0a79a3bf9b9c4c6d2f9e4",
+								"subCategory",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apple products1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/hp/Desktop/iphone12.jpeg"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65e0a79a3bf9b9c4c6d2f9e4/subCategory/update/65e0a87d30bea3ecec7cc360",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65e0a79a3bf9b9c4c6d2f9e4",
+								"subCategory",
+								"update",
+								"65e0a87d30bea3ecec7cc360"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all with category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "main electronics",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/subCategory",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"subCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id with all category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "main electronics",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/category/65e0a79a3bf9b9c4c6d2f9e4/subCategory/65e0a87d30bea3ecec7cc360",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								"65e0a79a3bf9b9c4c6d2f9e4",
+								"subCategory",
+								"65e0a87d30bea3ecec7cc360"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "add brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iphone",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/electronic3.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/brand/addBrand",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"brand",
+								"addBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "adidas",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/hp/Desktop/electronic2.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/brand/updateBrand/65b7ce96d80af703dfd29a93",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"brand",
+								"updateBrand",
+								"65b7ce96d80af703dfd29a93"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/brand",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"brand"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/brand/65b7ce96d80af703dfd29a93",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"brand",
+								"65b7ce96d80af703dfd29a93"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupon",
+			"item": [
+				{
+					"name": "get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/coupon",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/coupon/65db8c095db9939dd210b818",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"coupon",
+								"65db8c095db9939dd210b818"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "feb2020",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "expiresIn",
+									"value": "02/28/2024",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/download.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/coupon/add-coupon",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"coupon",
+								"add-coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "feb30",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "expiresIn",
+									"value": "02/28/2024",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/download.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/coupon/65db8c095db9939dd210b818",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"coupon",
+								"65db8c095db9939dd210b818"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"mohamed\",\r\n    \"email\":\"msallah307@gmail.com\",\r\n    \"password\":\"12345Mohamed\",\r\n    \"cPassword\":\"12345Mohamed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/signup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"msallah307@gmail.com\",\r\n    \"password\":\"3457Salah\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-code",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"msallah307@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/sendCode",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"sendCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"msallah307@gmail.com\",\r\n    \"code\":\"72260\",\r\n    \"password\":\"3457Salah\",\r\n    \"cPassword\":\"3457Salah\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/forgetPassword",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "create-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iphone15",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "totalPrice",
+									"value": "20000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "createdBy",
+									"value": "65dcdfb1e7ed3bae1652a549",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categoryId",
+									"value": "65e0a79a3bf9b9c4c6d2f9e4",
+									"type": "text"
+								},
+								{
+									"key": "subCategoryId",
+									"value": "65e0a85130bea3ecec7cc35c",
+									"type": "text"
+								},
+								{
+									"key": "brandId",
+									"value": "65e0a8be30bea3ecec7cc363",
+									"type": "text"
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/iphone12.jpeg"
+								},
+								{
+									"key": "subImages",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/iphone12.jpeg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/product/createProduct",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/product/65e0bf887aa8575986e79446",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"65e0bf887aa8575986e79446"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iphone 16",
+									"type": "text"
+								},
+								{
+									"key": "mainImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/iphone12.jpeg"
+								},
+								{
+									"key": "discount",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/product/65e0bf887aa8575986e79446",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"65e0bf887aa8575986e79446"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add-to-cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1zYWxsYWgzMDdAZ21haWwuY29tIiwiaWQiOiI2NWRjZGZiMWU3ZWQzYmFlMTY1MmE1NDkiLCJyb2xlIjoiQWRtaW4iLCJzdGF0dXMiOiJPbmxpbmUiLCJpYXQiOjE3MDkwNjI5MDV9.6PyAQ1qPpoKewGlT_7Efaa5jXgH3P56jwzQ7iZwhMLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"65e0bf887aa8575986e79446\",\r\n    \"quantity\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cart/addToCart",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cart",
+								"addToCart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "token",
+			"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1zYWxsYWgzMDdAZ21haWwuY29tIiwiaWQiOiI2NWRjZGZiMWU3ZWQzYmFlMTY1MmE1NDkiLCJyb2xlIjoiQWRtaW4iLCJzdGF0dXMiOiJPbmxpbmUiLCJpYXQiOjE3MDkwNjI5MDV9.6PyAQ1qPpoKewGlT_7Efaa5jXgH3P56jwzQ7iZwhMLs"
+		}
+	]
+}
